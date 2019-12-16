@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-logger" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>logger</name>
+    <js-module name="logger" src="www/logger.js">
+        <clobbers target="logger" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="logger">
+                <param name="android-package" value="cordova.plugin.logger.logger" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/logger.java" target-dir="src/cordova/plugin/logger/logger" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="logger">
+                <param name="ios-package" value="logger" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/logger.m" />
+    </platform>
+</plugin>
