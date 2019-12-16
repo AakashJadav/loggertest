@@ -1,4 +1,4 @@
-package cordova-plugin-logger;
+package cordova.plugin.logger;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
